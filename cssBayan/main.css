@@ -103,9 +103,10 @@ h3 {
     background-image: url("img/icons/icons8-macos-maximize-30.png");
     display: inline-flex;
     align-items: center;
-    justify-content: end;
+    justify-content: right;
     width: 30px;
     height: 30px;
+    transform: translateY(+20%);
 }
 
 /* .acc-row__input:checked ~ .acc-row__title {
