@@ -1,0 +1,162 @@
+* {
+    box-sizing: border-box;
+}
+
+:root {
+    --desktop-width: 1200px;
+    --tablet-width: 820px;
+    --mobile-width: 320px;
+  }
+
+html {
+    font-size: 10px;
+}
+
+body {
+    font-size: 1.6rem;
+    font-family: 'Open Sans', Verdana, sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    background-color: lightgreen;
+
+}
+
+h1 {
+    font-size: 4.4rem;
+    font-weight: 700;
+    font-style: normal;
+    line-height:  5.4rem;
+
+}
+
+h3 {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 2.4rem;
+    line-height: 3.4rem;
+}
+
+.wrapper {
+
+}
+
+.acc__container {
+    background-color: yellow;
+    padding: 30px 150px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.acc-row {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 2.4rem;
+    line-height: 3.4rem;
+    cursor: pointer;
+    transition: all 1s ease-out;
+}
+
+.acc-row:hover {
+    background-color: aqua;
+}
+
+
+
+/* .acc-row__input:not(:checked) */
+
+.acc-row:hover > .acc-row__input:not(:checked)  ~ .acc-row__meme{
+    display: block;
+    animation: fade_in 0.3s;
+
+}
+
+.acc-row:not(:hover) > .acc-row__meme{
+    display: none;
+    animation: fade_out 0.3s;
+
+}
+
+.acc-row__input {
+    width: 0;
+    height: 0;
+    -webkit-appearance: none;
+    appearance: none;
+    position: absolute;
+}
+
+.acc-row__title {
+    display: block;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 2.4rem;
+    line-height: 3.4rem;
+    cursor:pointer;
+}
+
+.acc-row__input:checked ~ .acc-row__meme {
+    display:block;
+
+}
+
+.acc-row__input:checked ~ .acc-row__title {
+    background-color: red;
+}
+
+.acc-row__input:not(:checked) ~ .acc-row__title {
+    background-color: blue;
+}
+
+
+@keyframes fade_in {
+    0% {
+         opacity: 0;
+         transform: scale(0)
+    }
+
+    100% {
+         opacity: 1;
+         transform: scale(1)
+    }
+}
+
+@keyframes fade-out {
+    100% {
+      opacity: 1;
+      transform: scale(1)
+    }
+
+    0% {
+      opacity: 0;
+      transform: scale(0)
+
+    }
+  }
+
+.acc-row__meme {
+     display: none;
+     transition: all 1s ;
+     height: 200px;
+}
+
+
+
+/* media-tablet */
+@media (max-width: 820px) {
+    .acc__container {
+        padding: 30px 47px;
+        background-color: orange;
+    }
+}
+
+/* media-mobile */
+@media (max-width: 320px) {
+    .acc__container {
+        padding: 30px 21px;
+        background-color: orchid;
+    }
+    .h1 {
+        font-size: 3.2rem;
+        line-height: 4.2rem;
+    }
+
+}
